@@ -74,3 +74,11 @@ PERL5LIB=${PERL5LIB:+$PERL5LIB:}$HOME/lib/perl5:/nfshome/leppert.5/nfshome/leppe
 fi
 MANPATH=${MANPATH:+$MANPATH:}$HOME/share/man
 export MANPATH PERL5LIB
+
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
