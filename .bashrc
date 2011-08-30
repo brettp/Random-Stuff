@@ -29,10 +29,11 @@ alias mysqlc="mysql --defaults-file=~/.mysql_info.conf"
 alias mysqlf="mysql --defaults-file=~/.mysql_info_foresight.conf"
 alias cd..="cd .." #work around a common typo
 alias e="vi"
+alias less='less -R'
 
 # Aliases I just can't live without
 ulimit -c 10000000
-alias ls='ls -haXF --color=auto'
+alias ls='ls -hXF --color=auto'
 alias grep='grep --color=tty'
 alias egrep='egrep --color=tty'
 alias cd..='cd ..'

@@ -28,6 +28,11 @@ echo -en "$LCYAN"
 date
 echo -en "$NOCOLOR"
 
+# User specific environment and startup programs
+PATH=/opt/local/libexec/gnubin:$HOME/bin:$PATH:/usr/local/mysql/bin:/opt/local/bin
+
+export PATH
+
 # do the bashrc thing
 if [ -e ~/.bashrc ] ; then
 . ~/.bashrc
@@ -57,20 +62,12 @@ echo "_________________________________________________________________________"
 echo -en "$NOCOLOR"
 echo
 
+unset USERNAME
+# todo why is this called twice?
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
-
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/bin
-
-export PATH
-unset USERNAME
-
-export CVSROOT=@cdev1.wblt.calltech:/home/cvs
-export CVS_RSH=ssh
 
 if [ -d $HOME/lib/perl5 ]; then
 PERL5LIB=${PERL5LIB:+$PERL5LIB:}$HOME/lib/perl5:/nfshome/leppert.5/nfshome/leppert.5/lib/perl5 
