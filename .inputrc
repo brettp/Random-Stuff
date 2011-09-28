@@ -1,0 +1,2 @@
+# append a / on tab completion with symbolic links
+set mark-symlinked-directories on

@@ -18,6 +18,7 @@ fi
 export HISTSIZE=5000
 export HISTFILESIZE=5000
 export HISTCONTROL=ignoredups
+export INPUTRC=~/.inputrc
 
 shopt -s checkwinsize
 
@@ -30,6 +31,7 @@ alias mysqlf="mysql --defaults-file=~/.mysql_info_foresight.conf"
 alias cd..="cd .." #work around a common typo
 alias e="vi"
 alias less='less -R'
+alias rgrep='grep * -R'
 
 # Aliases I just can't live without
 ulimit -c 10000000
@@ -63,6 +65,11 @@ alias etester="vi /nfshome/leppert.5/devel/ccms_trunk_test/cgi-bin/test.pl"
 alias cp='cp -i -v' # prompt before overwriting files
 alias rm='rm -i'  # prompt before deleting files
 alias cvsstatus="cvs up -d 2> /dev/null"
+
+#python and django
+alias dj_runserver="python manage.py runserver"
+
+alias gack-grep='ack --ignore-dir=".svn" --ignore-dir="vendor" --ignore-dir="vendors" --ignore-dir=".git"'
 
 export HISTSIZE=100000
 export HISTFILESIZE=100000
